@@ -47,3 +47,182 @@ This command changes your current directory to the hangman-game folder that cont
 ## Acknowledgments
 - Thanks to the contributors of the word list and hangman art resources.
 - Inspired by classic word guessing games.
+
+
+### Example
+```plaintext
+ _
+| |  Welcome to the
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __ 
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |          game!
+                   |___/
+
+
+Word to guess: _____
+Lives left: 6/6
+Please guess a letter: d
+Sorry, D is not in the word.
+
+Word to guess: _____
+Guessed letters: D
+
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+
+Lives left: 5/6
+Please guess a letter: m
+
+Word to guess: m____
+Guessed letters: D, M
+
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+
+Lives left: 5/6
+Please guess a letter: o
+
+Word to guess: mo___
+Guessed letters: D, M, O
+
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+
+Lives left: 5/6
+Please guess a letter: 4
+Oops! That doesn't seem to be a valid letter. Give it another shot!
+Please guess a letter: a
+Sorry, A is not in the word.
+
+Word to guess: mo___
+Guessed letters: D, M, O, A
+
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+
+Lives left: 4/6
+Please guess a letter: u
+
+Word to guess: mou__
+Guessed letters: D, M, O, A, U
+
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+
+Lives left: 4/6
+Please guess a letter: i
+Sorry, I is not in the word.
+
+Word to guess: mou__
+Guessed letters: D, M, O, A, U, I
+
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========
+Lives left: 3/6
+Please guess a letter: z
+Sorry, Z is not in the word.
+
+Word to guess: mou__
+Guessed letters: D, M, O, A, U, I, Z
+
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+
+Lives left: 2/6
+Please guess a letter: k
+Sorry, K is not in the word.
+
+Word to guess: mou__
+Guessed letters: D, M, O, A, U, I, Z, K
+
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+
+Lives left: 1/6
+Please guess a letter: e
+
+Word to guess: mou_e
+Guessed letters: D, M, O, A, U, I, Z, K, E
+
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+
+Lives left: 1/6
+Please guess a letter: s
+
+Word to guess: mouse
+Guessed letters: D, M, O, A, U, I, Z, K, E, S
+
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+
+Your total score:
+Wins: 1
+Losses: 0
+
+------------------------- The word was MOUSE -------------------------
+
+
+ /$$     /$$                                      /$$           /$$
+|  $$   /$$/                                     |__/          | $$
+ \  $$ /$$//$$$$$$  /$$   /$$       /$$  /$$  /$$ /$$ /$$$$$$$ | $$
+  \  $$$$//$$__  $$| $$  | $$      | $$ | $$ | $$| $$| $$__  $$| $$
+   \  $$/| $$  \ $$| $$  | $$      | $$ | $$ | $$| $$| $$  \ $$|__/
+    | $$ | $$  | $$| $$  | $$      | $$ | $$ | $$| $$| $$  | $$    
+    | $$ |  $$$$$$/|  $$$$$$/      |  $$$$$/$$$$/| $$| $$  | $$ /$$
+    |__/  \______/  \______/        \_____/\___/ |__/|__/  |__/|__/
+
+
+Do you want to play again? Type 'y' for Yes or 'n' to exit the game. 
