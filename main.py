@@ -104,6 +104,9 @@ while not exit_game:
             if guess not in alphabet: # Check if the guessed letter is not in the predefined alphabet
                 print("Oops! That doesn't seem to be a valid letter. Give it another shot!") # Inform the user that the guess is invalid
                 valid_guess = False # Set flag to false
+            elif guess in guessed_letters: # Check if the guess has already been made
+                print(f"You have already guessed {guess.upper()}. Try again!") # Inform the user
+                valid_guess = False  # Set flag to false
             else: # If the guessed letter is valid
                 valid_guess = True # Set the flag to true to exit the loop
 
@@ -119,15 +122,12 @@ while not exit_game:
             else:
                 display += "_" # Hide the letter with an underscore
 
-        # Check if the guess has already been made
-        if guess in guessed_letters:
-            print(f"You have already guessed {guess.upper()}") # Inform the user
-        else: # Guess has not been made before
-            guessed_letters += guess # Add the guess to guessed_letters list
-            #If the guess is incorrect
-            if guess not in chosen_word:
-                print(f"Sorry, {guess.upper()} is not in the word.") # Inform user of wrong guess
-                lives -= 1 #decrease the number of lives
+
+        guessed_letters += guess # Add the guess to guessed_letters list
+        #If the guess is incorrect
+        if guess not in chosen_word:
+            print(f"Sorry, {guess.upper()} is not in the word.") # Inform user of wrong guess
+            lives -= 1 #decrease the number of lives
 
         # Create a string of guessed letters for display
         guessed_letter_print = ', '.join(letter.upper() for letter in guessed_letters)
