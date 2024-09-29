@@ -11,8 +11,9 @@ Additionally, it validated user input for both letter guesses and continuation o
 Version: 1.1
 
 Changelog:
-- v1.1: Added tracking for total wins/losses, visual display of game outcome, and input validation for letter guesses and game continuation.
-- v1.0: Initial release with basic gameplay functionality.
+- v1.1.1: Refined docstring format for the `prompt_exit_game` and `end_of_round` function.
+- v1.1.0: Added tracking for total wins/losses, visual display of game outcome, and input validation for letter guesses and game continuation.
+- v1.0.0: Initial release with basic gameplay functionality.
 """
 
 import random # Import random module for selecting a random word
@@ -20,17 +21,17 @@ from hangman_art import stages, logo, win, lose # Import visual elements for the
 from hangman_words import word_list, alphabet # Import the predefined list of words for the game and the alphabet for validating user input
 
 
-"""
-Prompts the user to decide whether to play the game again.
-
-This function repeatedly asks the user for input until a valid response ('y' for yes or 'n' for no) is received. 
-The user's input is converted to lowercase to ensure case-insensitivity.
-
-Returns:
-    bool: Returns True if the user chooses not to play again (by typing 'n'),
-    and false if the user wants to continue playing (by typing 'y'). 
-"""
 def prompt_exit_game():
+    """
+    Prompts the user to decide whether to play the game again.
+
+    This function repeatedly asks the user for input until a valid response ('y' for yes or 'n' for no) is received.
+    The user's input is converted to lowercase to ensure case-insensitivity.
+
+    :return:
+        bool: Returns True if the user chooses not to play again (by typing 'n'),
+        and false if the user wants to continue playing (by typing 'y').
+    """
     valid_input = False # Initialize a flag to track if the input is valid
     choice = "" # Initialize the choice variable
 
@@ -45,19 +46,22 @@ def prompt_exit_game():
     return choice != 'y' # Return true to exit if the user does not want to play again
 
 
-"""
-Displays the result of the round in the game
 
-Parameters:
-    result (str): A string indicating the outcome of the round. Either "win" or "lose"
-    
-The function prints the user's total score, including the number of wins and losses,
-reveals the correct word, and displays an appropriate message based on whether the
-user won or lost the round.
-"""
 def end_of_round(result):
-    print(f"Your total score:\nWins: {wins}\nLosses: {losses}") # Display the user's total score, including the number of wins and losses
-    print(f"\n------------------------- The word was {chosen_word.upper()} -------------------------")  # Inform user of the outcome adn reveal the correct word
+    """
+    The function prints the user's total score, including the number of wins and losses,
+    reveals the correct word, and displays an appropriate message based on whether the
+    user won or lost the round.
+
+    :param result: A string indicating the outcome of the round. Either "win" or "lose"
+    :return: None
+    """
+    # Display the user's total score, including the number of wins and losses
+    print(f"Your total score:\nWins: {wins}\nLosses: {losses}")
+
+    # Inform user of the outcome and reveal the correct word
+    print(f"\n------------------------- The word was {chosen_word.upper()} -------------------------")
+
     #Check the result of the round; if the user won, display the winning message
     if result == "win":
         print(win[0]) # Print the winning message
@@ -152,6 +156,5 @@ while not exit_game:
             end_of_round("win") # Call the function to handle the end of the round for a loss
             game_over = True # End the round
             exit_game = prompt_exit_game() # Ask the user if they want to exit the game
-
 
 print("\nThank you for playing. Goodbye!") # Thank user for playing

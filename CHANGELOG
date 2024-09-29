@@ -1,12 +1,16 @@
 # Changelog
 
-## [1.1] - 2024-09-27
+## [1.1.1] - 2024-09-29
+ - Refined docstring format for the `prompt_exit_game` and `end_of_round` function.
+ - No functionality changes.
+
+## [1.1.0] - 2024-09-27
 ### Added
  - Tracking for total wins and losses.
  - Visual display for win/loss outcome.
  - Input validation for letter guesses and game continuation.
 
- ## [1.0] - 2024-09-26
+ ## [1.0.0] - 2024-09-26
  ### Added
  - Initial version of the Hangman game.
  - Basic gameplay functionality.
